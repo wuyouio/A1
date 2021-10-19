@@ -496,7 +496,7 @@ func (c *Container) getConfig(handle func(*bufio.Reader) string) error {
 		if err != nil {
 			return err
 		}
-		req := httplib.Get(c.Address + "/api/config/config")
+		req := httplib.Get(c.Address + "/api/config/usrconfig")
 		req.Header("Cookie", c.Token)
 		rsp, err := req.Response()
 		if err != nil {
@@ -519,7 +519,7 @@ func (c *Container) postConfig(handle func(config string) string) error {
 		req := httplib.Post(c.Address + "/api/save")
 		req.Header("Cookie", c.Token)
 		req.Param("content", handle(c.Config))
-		req.Param("name", "config.sh")
+		req.Param("name", "cookie.sh")
 		_, err := req.Bytes()
 		if err != nil {
 			return err
@@ -549,7 +549,7 @@ func (c *Container) getSession() error {
 		}
 		return nil
 	} else {
-		req := httplib.Post(c.Address + "/auth")
+		req := httplib.Post(c.Address + "/login")
 		req.Param("username", c.Username)
 		req.Param("password", c.Password)
 		rsp, err := req.Response()
