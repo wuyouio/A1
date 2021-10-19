@@ -11,7 +11,6 @@
 
 
 
-<img src="https://i.loli.net/2021/10/11/odcbTfw4LM9svOS.jpg" alt="1.jpg" style="zoom:33%;" /><img src="https://i.loli.net/2021/10/11/ru73IykXez9g48K.jpg" alt="2.jpg" style="zoom: 23%;" />
 
 # 更新日志
 
@@ -149,12 +148,19 @@ fix 重大BUG修复，解决以下几个问题，
 
 xdd-plus安装教程
 第一步：下载go
+
 cd /usr/local && wget https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz -O go1.16.7.linux-amd64.tar.gz
+
 第二步：解压go
+
 tar -xvzf go1.16.7.linux-amd64.tar.gz
+
 第三步：设置环境变量 
+
 vi /etc/profile
+
 将文本复制到最后一行
+
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 export GOROOT=/usr/local/go
@@ -167,7 +173,9 @@ source /etc/profile
 第六步：检查go安装
 go env
 第七步：拉xdd-plus的库
+
 cd ~ && git clone https://ghproxy.com/https://github.com/764763903a/xdd-plus.git
+
 第八步：编译xdd-plus
 cd /root/xdd-plus && go build
 
