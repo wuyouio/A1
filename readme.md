@@ -7,12 +7,16 @@
 
 # 支持作者
 
-就当是支持支持作者更新吧 谢谢各位了。  几毛钱的包愿意就当支持我了 每天都可以领一次 建议保存到本地 辛苦了  不愿意也没事 几块钱的大家可以去买瓶水喝
+就当是支持支持作者更新吧 谢谢各位了。
 
-
-
-
+![微信图片_20211026143647.jpg](https://i.loli.net/2021/10/26/Av6oWqYS5UpFf2g.jpg)
 # 更新日志
+## 10-26
+- 修复了推一推不正常扣余额问题
+- 恢复soha等功能 慎用
+- 下个版本推出砍价功能
+- 发财大赢家助力功能
+- 
 
 ## 10-11
 
@@ -148,19 +152,12 @@ fix 重大BUG修复，解决以下几个问题，
 
 xdd-plus安装教程
 第一步：下载go
-
 cd /usr/local && wget https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz -O go1.16.7.linux-amd64.tar.gz
-
 第二步：解压go
-
 tar -xvzf go1.16.7.linux-amd64.tar.gz
-
 第三步：设置环境变量 
-
 vi /etc/profile
-
 将文本复制到最后一行
-
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 export GOROOT=/usr/local/go
@@ -173,9 +170,7 @@ source /etc/profile
 第六步：检查go安装
 go env
 第七步：拉xdd-plus的库
-
 cd ~ && git clone https://ghproxy.com/https://github.com/764763903a/xdd-plus.git
-
 第八步：编译xdd-plus
 cd /root/xdd-plus && go build
 
